@@ -3,7 +3,16 @@ const moment = require('moment')
 const regex = require('./regex')
 
 const rawToJson = (raw, domain) => {
-  if (raw === null) {
+  if (
+    !validate(domain, {
+      subdomain: false,
+      wildcard: false,
+      allowUnicode: false,
+      topLevel: false
+    })
+  ) {
+    throw new Error('TLD not supported')
+  } else if (raw === null) {
     throw new Error('No whois data received')
   } else if (raw.length <= 10) {
     throw new Error(`Bad whois data: ${raw}`)
@@ -29,16 +38,7 @@ const rawToJson = (raw, domain) => {
           : new RegExp(domainRegex[key])
 
       if (raw.match(regexp) && key !== 'dateFormat') {
-        if (
-          !validate(domain, {
-            subdomain: false,
-            wildcard: false,
-            allowUnicode: false,
-            topLevel: false
-          })
-        ) {
-          throw new Error('TLD not supported')
-        } else if (key === 'rateLimited') {
+        if (key === 'rateLimited') {
           throw new Error('Rate limited')
         } else if (key === 'notFound') {
           result.isAvailable = true
@@ -71,7 +71,7 @@ const rawToJson = (raw, domain) => {
 
     return {
       ...result,
-      raw: raw
+      raw
     }
   }
 }
