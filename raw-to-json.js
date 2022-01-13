@@ -1,3 +1,4 @@
+const validate = require('is-valid-domain')
 const moment = require('moment')
 const regex = require('./regex')
 
@@ -9,7 +10,6 @@ const rawToJson = (raw, domain) => {
   } else {
     const extensions = Object.keys(regex.extensions)
     let domainRegex = regex.default
-    let undefinedTLD = true
     let result = {
       statusCode: 200,
       isAvailable: false,
@@ -19,7 +19,6 @@ const rawToJson = (raw, domain) => {
     extensions.map((extension) => {
       if (domain.endsWith('.' + extension)) {
         domainRegex = regex.extensions[extension]
-        undefinedTLD = false
       }
     })
 
@@ -30,7 +29,16 @@ const rawToJson = (raw, domain) => {
           : new RegExp(domainRegex[key])
 
       if (raw.match(regexp) && key !== 'dateFormat') {
-        if (key === 'rateLimited') {
+        if (
+          !validate(domain, {
+            subdomain: false,
+            wildcard: false,
+            allowUnicode: false,
+            topLevel: false
+          })
+        ) {
+          throw new Error('TLD not supported')
+        } else if (key === 'rateLimited') {
           throw new Error('Rate limited')
         } else if (key === 'notFound') {
           result.isAvailable = true
@@ -61,17 +69,6 @@ const rawToJson = (raw, domain) => {
       }
     })
 
-    if (undefinedTLD) {
-      if (!result.isAvailable) {
-        if (
-          !result.hasOwnProperty('creationDate') ||
-          !result.hasOwnProperty('expirationDate') ||
-          !result.hasOwnProperty('updatedDate') ||
-          !result.hasOwnProperty('registrar')
-        )
-          throw new Error('TLD not supported')
-      }
-    }
     return {
       ...result,
       raw: raw
