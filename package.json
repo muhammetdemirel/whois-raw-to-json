@@ -1,0 +1,31 @@
+{
+  "name": "whois-raw-to-json",
+  "version": "1.0.0",
+  "description": "Module that allows you to query whois information and display data in json format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regexart/whois-raw-to-json.git"
+  },
+  "keywords": [
+    "whois"
+  ],
+  "author": "RegEx Art <regexart@gmail.com> (https://regexart.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/regexart/whois-raw-to-json/issues"
+  },
+  "homepage": "https://github.com/regexart/whois-raw-to-json#readme",
+  "engines": {
+    "node": ">=15"
+  },
+  "dependencies": {
+    "html-entities": "^2.3.2",
+    "moment": "^2.29.1",
+    "whois": "^2.13.7",
+    "is-valid-domain": "^0.1.5"
+  }
+}

@@ -1,0 +1,30 @@
+const util = require('util')
+const whois = require('whois')
+const rawToJson = require('./raw-to-json')
+
+let lookup = util.promisify(whois.lookup)
+
+module.exports = {
+  lookup: async function (domain, options = { follow: 0, verbose: false }) {
+    try {
+      let result = {}
+      let raw = await lookup(domain, options)
+
+      if (typeof raw === 'object') {
+        result = raw.map(function (data) {
+          data.data = rawToJson(data.data, domain)
+          return data
+        })
+      } else {
+        result = { ...result, ...rawToJson(raw, domain) }
+      }
+
+      return result
+    } catch (error) {
+      return {
+        statusCode: 404,
+        message: error.message
+      }
+    }
+  }
+}
