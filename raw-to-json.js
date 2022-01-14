@@ -58,8 +58,10 @@ const rawToJson = (raw, domain) => {
             key === 'updatedDate'
           ) {
             result[key] = domainRegex.hasOwnProperty('dateFormat')
-              ? moment(value, domainRegex.dateFormat).toJSON()
-              : moment(value).toJSON()
+              ? moment
+                  .utc(value, domainRegex.dateFormat)
+                  .format('DD.MM.YYYY HH:mm:ss')
+              : moment.utc(value).format('DD.MM.YYYY HH:mm:ss')
           } else if (key === 'domainName') {
             result[key] = value.toLowerCase()
           } else {
