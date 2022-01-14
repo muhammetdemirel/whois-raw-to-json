@@ -1,6 +1,6 @@
 {
   "name": "whois-raw-to-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module that allows you to query whois information and display data in json format.",
   "main": "index.js",
   "scripts": {
