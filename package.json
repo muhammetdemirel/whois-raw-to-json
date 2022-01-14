@@ -25,7 +25,6 @@
   "dependencies": {
     "html-entities": "^2.3.2",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.34",
     "whois": "^2.13.7",
     "is-valid-domain": "^0.1.5"
   }
