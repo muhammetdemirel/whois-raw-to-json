@@ -1,6 +1,7 @@
 const validate = require('is-valid-domain')
-const moment = require('moment')
+const moment = require('moment-timezone')
 const regex = require('./regex')
+const timezone = 'Europe/Istanbul'
 
 const rawToJson = (raw, domain) => {
   if (
@@ -58,8 +59,8 @@ const rawToJson = (raw, domain) => {
             key === 'updatedDate'
           ) {
             result[key] = domainRegex.hasOwnProperty('dateFormat')
-              ? moment(value, domainRegex.dateFormat).toJSON()
-              : moment(value).toJSON()
+              ? moment.tz(value, domainRegex.dateFormat, timezone).format()
+              : moment.tz(value, timezone).format()
           } else if (key === 'domainName') {
             result[key] = value.toLowerCase()
           } else {
