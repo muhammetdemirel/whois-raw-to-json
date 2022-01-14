@@ -87,16 +87,46 @@ const regex = {
       dateFormat: 'YYYY-MM-DDThh:mm:ssZ',
       notFound: '^No Data Found'
     },
+    xyz: {
+      domainName: 'Domain Name: *([^\\s]+)',
+      registrar: 'Registrar: *(.+)',
+      updatedDate: 'Updated Date: *(.+)',
+      creationDate: 'Creation Date: *(.+)',
+      expirationDate: 'Expir\\w+ Date: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
+      nameServers: 'Name Server: *(.+)',
+      notFound: 'DOMAIN NOT FOUND'
+    },
+    io: {
+      domainName: 'Domain Name: *([^\\s]+)',
+      registrar: 'Registrar: *(.+)',
+      updatedDate: 'Updated Date: *(.+)',
+      creationDate: 'Creation Date: *(.+)',
+      expirationDate: 'Expir\\w+ Date: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
+      nameServers: 'Name Server: *(.+)',
+      notFound: 'Domain not found'
+    },
+    info: {
+      domainName: 'Domain Name: *([^\\s]+)',
+      registrar: 'Registrar: *(.+)',
+      updatedDate: 'Updated Date: *(.+)',
+      creationDate: 'Creation Date: *(.+)',
+      expirationDate: 'Expir\\w+ Date: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
+      nameServers: 'Name Server: *(.+)',
+      notFound: 'Domain not found'
+    },
     us: {
       domainName: 'Domain Name: *([^\\s]+)',
       registrar: 'Registrar: *(.+)',
-      status: 'Domain Status: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Registry Expiry Date: *(.+)',
       updatedDate: 'Updated Date: *(.+)',
+      creationDate: 'Creat(ed|ion) Date: *(.+)',
+      expirationDate: 'Expir\\w+ Date: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
       nameServers: 'Name Server: *(.+)',
-      notFound: '^No Data Found',
-      dateFormat: 'YYYY-MM-DDThh:mm:ssZ'
+      dateFormat: 'YYYY-MM-DDThh:mm:ssZ',
+      notFound: '^No Data Found'
     },
     ru: {
       domainName: 'domain: *([^\\s]+)',
@@ -104,6 +134,7 @@ const regex = {
       creationDate: 'created: *(.+)',
       expirationDate: 'paid-till: *(.+)',
       status: 'state: *(.+)',
+      nameServers: 'server: *(.+)',
       notFound: 'No entries found'
     },
     su: {
@@ -112,59 +143,19 @@ const regex = {
       creationDate: 'created: *(.+)',
       expirationDate: 'paid-till: *(.+)',
       status: 'state: *(.+)',
+      nameServers: 'server: *(.+)',
       notFound: 'No entries found'
     },
     uk: {
       domainName: 'Domain name:\\s*([^\\s]+)',
       registrar: 'Registrar:\\s*(.+)',
-      status: 'Registration status:\\s*(.+)',
+      updatedDate: 'Last updated:\\s*(.+)',
       creationDate: 'Registered on:\\s*(.+)',
       expirationDate: 'Expiry date:\\s*(.+)',
-      updatedDate: 'Last updated:\\s*(.+)',
-      notFound: 'No match for ',
-      dateFormat: 'DD-MMM-YYYY'
-    },
-    fr: {
-      domainName: 'domain: *([^\\s]+)',
-      registrar: 'registrar: *(.+)',
-      creationDate: 'created: *(.+)',
-      expirationDate: 'Expir\\w+ Date:\\s?(.+)',
-      status: 'status: *(.+)',
-      updatedDate: 'last-update: *(.+)',
-      notFound: 'No entries found in ',
-      dateFormat: 'YYYY-MM-DDThh:mm:ssZ'
-    },
-    nl: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *\\s*(.+)',
-      status: 'Status: *(.+)',
-      notFound: '\\.nl is free',
-      rateLimited: 'maximum number of requests per second exceeded'
-    },
-    pl: {
-      domainName: 'DOMAIN NAME: *([^\\s]+)[s]+$',
-      registrar: 'REGISTRAR: *\\s*(.+)',
-      status: 'Registration status:\\n\\s*(.+)',
-      creationDate: 'created: *(.+)',
-      expirationDate: 'renewal date: *(.+)',
-      updatedDate: 'last modified: *(.+)',
-      notFound: 'No information available about domain name',
-      dateFormat: 'YYYY.MM.DD hh:mm:ss'
-    },
-    eu: {
-      domainName: 'Domain: *([^\\n\\r]+)',
-      registrar: 'Registrar: *\\n *Name: *([^\\n\\r]+)',
-      notFound: 'Status: AVAILABLE'
-    },
-    mobi: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status: *(.+)',
-      nameServers: 'Name Server: *(.+)',
-      notFound: '^NOT FOUND'
+      status: 'Registration status:\\s*(.+)',
+      nameServers: 'Name servers:\\s*(.+)',
+      dateFormat: 'DD-MMM-YYYY',
+      notFound: 'No match for '
     }
   }
 }
