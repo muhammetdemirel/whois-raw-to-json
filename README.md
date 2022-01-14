@@ -25,9 +25,9 @@ Module that allows you to query whois information and display data in json forma
   "isAvailable": false,
   "domainName": "regexart.com",
   "registrar": "Google LLC",
-  "updatedDate": "2021-12-13T15:51:58.000Z",
-  "creationDate": "2021-12-11T23:31:34.000Z",
-  "expirationDate": "2022-12-11T23:31:34.000Z",
+  "updatedDate": "13.12.2021 15:51:58",
+  "creationDate": "11.12.2021 23:31:34",
+  "expirationDate": "11.12.2022 23:31:34",
   "status": [
     "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
   ],
@@ -47,3 +47,18 @@ Module that allows you to query whois information and display data in json forma
   "message": "TLD not supported"
 }
 ```
+
+## Supported TLDs
+
+|      |      | ALL  |     |       |
+| :--: | :--: | :--: | :-: | :---: |
+| .com | .net | .org | .co |  .me  |
+| .im  | .in  | .xyz | .io | .info |
+| .us  | .ru  | .su  | .uk |   -   |
+
+|         |         |    TR    |          |         |
+| :-----: | :-----: | :------: | :------: | :-----: |
+| .com.tr | .net.tr | .org.tr  | .gen.tr  | .web.tr |
+| .tv.tr  | .biz.tr | .info.tr | .name.tr | .bbs.tr |
+| .tel.tr | .edu.tr | .gov.tr  |  .dr.tr  | .av.tr  |
+| .pol.tr | .tsk.tr | .mil.tr  | .bel.tr  | .k12.tr |
