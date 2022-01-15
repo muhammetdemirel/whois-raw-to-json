@@ -8,7 +8,7 @@ const regex = {
     status: 'Status:\\s*(.+)\\s*\\n',
     nameServers: 'Name Server: *(.+)',
     notFound:
-      '(No match for |Domain not found|No Data Found|DOMAIN NOT FOUND|does not exist|No entries found|No Object Found|^NOT FOUND|^No Data Found|NOT FOUND\\s)'
+      '(No match for |Domain not found|No Data Found|DOMAIN NOT FOUND|does not exist|No entries found|No Object Found|not been registered|available for registration|^Not found|^NOT FOUND|^No Data Found|NOT FOUND\\s)'
   },
   extensions: {
     tr: {
@@ -60,6 +60,32 @@ const regex = {
       nameServers: 'Nserver: *(.+)',
       dateFormat: 'YYYY-MM-DDThh:mm:ss',
       notFound: 'Status: free'
+    },
+    at: {
+      domainName: 'domain: *([^\\s]+)',
+      registrar: 'registrar: *(.+)',
+      updatedDate: 'changed: *(.+)',
+      nameServers: 'nserver: *(.+)',
+      dateFormat: 'YYYYMMDD hh:mm:ss',
+      notFound: 'nothing found'
+    },
+    pm: {
+      domainName: 'domain: *([^\\s]+)',
+      registrar: 'registrar: *(.+)',
+      updatedDate: 'last-update: *(.+)',
+      creationDate: 'created: *(.+)',
+      expirationDate: 'Expir\\w+ Date: *(.+)',
+      nameServers: 'nserver: *(.+)',
+      notFound: 'No entries found'
+    },
+    cn: {
+      domainName: 'Domain Name: *([^\\s]+)',
+      registrar: 'Registrar: *(.+)',
+      creationDate: 'Registration Time: *(.+)',
+      expirationDate: 'Expiration Time: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
+      nameServers: 'Name Server: *(.+)',
+      notFound: 'No matching record'
     }
   }
 }
@@ -95,7 +121,28 @@ regex.extensions = {
   shop: regex.default,
   store: regex.default,
   cloud: regex.default,
-  su: regex.extensions.ru
+  ws: regex.default,
+  ie: regex.default,
+  ist: regex.default,
+  istanbul: regex.default,
+  link: regex.default,
+  kim: regex.default,
+  vip: regex.default,
+  red: regex.default,
+  men: regex.default,
+  wtf: regex.default,
+  art: regex.default,
+  one: regex.default,
+  news: regex.default,
+  live: regex.default,
+  life: regex.default,
+  works: regex.default,
+  email: regex.default,
+  design: regex.default,
+  global: regex.default,
+  network: regex.default,
+  su: regex.extensions.ru,
+  re: regex.extensions.pm
 }
 
 module.exports = regex

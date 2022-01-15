@@ -23,6 +23,7 @@ Module that allows you to query whois information and display data in json forma
 {
   "statusCode": 200,
   "isAvailable": false,
+  "supportedTLD": true,
   "domainName": "regexart.com",
   "registrar": "Google LLC",
   "updatedDate": "13.12.2021 15:51:58",
@@ -52,15 +53,20 @@ Module that allows you to query whois information and display data in json forma
 
 Other TLDs output JSON but do not guarantee full compatibility.
 
-|       |           |  ALL  |        |        |
-| :---: | :-------: | :---: | :----: | :----: |
-| .com  |   .net    | .org  |  .co   |  .xyz  |
-|  .io  |    .me    | .info |  .top  |  .in   |
-|  .ai  |  .online  |  .us  |  .biz  |  .tv   |
-| .tech |    .cc    | .club |  .dev  | .mobi  |
-| .name |    .ru    |  .su  |  .im   |  .uk   |
-|  .tc  |    .pw    | .pro  |  .de   |  .app  |
-| .site | .download | .shop | .store | .cloud |
+|        |           |    ALL    |          |        |
+| :----: | :-------: | :-------: | :------: | :----: |
+|  .com  |   .net    |   .org    |   .co    |  .xyz  |
+|  .io   |    .me    |   .info   |   .top   |  .in   |
+|  .ai   |  .online  |    .us    |   .biz   |  .tv   |
+| .tech  |    .cc    |   .club   |   .dev   | .mobi  |
+| .name  |    .ru    |    .su    |   .im    |  .uk   |
+|  .tc   |    .pw    |   .pro    |   .de    |  .app  |
+| .site  | .download |   .shop   |  .store  | .cloud |
+|  .cn   |    .at    |    .pm    |   .re    |  .ws   |
+|  .ie   |   .ist    | .istanbul |  .link   |  .kim  |
+|  .vip  |   .red    |   .men    |   .wtf   |  .art  |
+|  .one  |   .news   |   .live   |  .life   | .works |
+| .email |  .design  |  .global  | .network |   .    |
 
 |         |         |    TR    |          |         |
 | :-----: | :-----: | :------: | :------: | :-----: |
