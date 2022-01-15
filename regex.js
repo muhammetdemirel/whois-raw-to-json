@@ -7,50 +7,10 @@ const regex = {
     expirationDate: 'Expir\\w+ Date: *(.+)',
     status: 'Status:\\s*(.+)\\s*\\n',
     nameServers: 'Name Server: *(.+)',
-    dateFormat: 'YYYY-MM-DDThh:mm:ssZ',
-    notFound: '(No match for |Domain not found|NOT FOUND\\s)'
+    notFound:
+      '(No match for |Domain not found|No Data Found|DOMAIN NOT FOUND|does not exist|No entries found|No Object Found|^NOT FOUND|^No Data Found|NOT FOUND\\s)'
   },
   extensions: {
-    com: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'No match for '
-    },
-    net: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'No match for '
-    },
-    org: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status: *(.+)',
-      nameServers: 'Name Server: *(.+)',
-      notFound: '^NOT FOUND'
-    },
-    co: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'No Data Found'
-    },
     tr: {
       domainName: 'Domain Name: *([^\\s]+)',
       registrar: 'Organization Name\t: *(.+)',
@@ -59,16 +19,6 @@ const regex = {
       dateFormat: 'YYYY-MMM-DD',
       notFound: 'No match found'
     },
-    me: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status: *(.+)',
-      nameServers: 'Name Server: *(.+)',
-      notFound: '^NOT FOUND'
-    },
     im: {
       domainName: 'Domain Name: *([^\\s]+)',
       expirationDate: 'Expir\\w+ Date: *(.+)',
@@ -76,68 +26,7 @@ const regex = {
       dateFormat: 'DD/MM/YYYY hh:mm:ss',
       notFound: 'was not found'
     },
-    in: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creat(ed|ion) Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      dateFormat: 'YYYY-MM-DDThh:mm:ssZ',
-      notFound: '^No Data Found'
-    },
-    xyz: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'DOMAIN NOT FOUND'
-    },
-    io: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'Domain not found'
-    },
-    info: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creation Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      notFound: 'Domain not found'
-    },
-    us: {
-      domainName: 'Domain Name: *([^\\s]+)',
-      registrar: 'Registrar: *(.+)',
-      updatedDate: 'Updated Date: *(.+)',
-      creationDate: 'Creat(ed|ion) Date: *(.+)',
-      expirationDate: 'Expir\\w+ Date: *(.+)',
-      status: 'Status:\\s*(.+)\\s*\\n',
-      nameServers: 'Name Server: *(.+)',
-      dateFormat: 'YYYY-MM-DDThh:mm:ssZ',
-      notFound: '^No Data Found'
-    },
     ru: {
-      domainName: 'domain: *([^\\s]+)',
-      registrar: 'registrar: *(.+)',
-      creationDate: 'created: *(.+)',
-      expirationDate: 'paid-till: *(.+)',
-      status: 'state: *(.+)',
-      nameServers: 'server: *(.+)',
-      notFound: 'No entries found'
-    },
-    su: {
       domainName: 'domain: *([^\\s]+)',
       registrar: 'registrar: *(.+)',
       creationDate: 'created: *(.+)',
@@ -156,8 +45,57 @@ const regex = {
       nameServers: 'Name servers:\\s*(.+)',
       dateFormat: 'DD-MMM-YYYY',
       notFound: 'No match for '
+    },
+    ai: {
+      domainName: 'Domain Name: *([^\\s]+)',
+      registrar: 'Registrar: *(.+)',
+      creationDate: 'Creation Date: *(.+)',
+      nameServers: 'Name Server: *(.+)',
+      notFound: 'No Object Found'
+    },
+    de: {
+      domainName: 'Domain: *([^\\s]+)',
+      updatedDate: 'Changed: *(.+)',
+      status: 'Status:\\s*(.+)\\s*\\n',
+      nameServers: 'Nserver: *(.+)',
+      dateFormat: 'YYYY-MM-DDThh:mm:ss',
+      notFound: 'Status: free'
     }
   }
+}
+
+regex.extensions = {
+  ...regex.extensions,
+  com: regex.default,
+  net: regex.default,
+  org: regex.default,
+  co: regex.default,
+  xyz: regex.default,
+  io: regex.default,
+  me: regex.default,
+  info: regex.default,
+  top: regex.default,
+  in: regex.default,
+  online: regex.default,
+  us: regex.default,
+  biz: regex.default,
+  tv: regex.default,
+  tech: regex.default,
+  cc: regex.default,
+  club: regex.default,
+  dev: regex.default,
+  mobi: regex.default,
+  name: regex.default,
+  tc: regex.default,
+  pw: regex.default,
+  pro: regex.default,
+  app: regex.default,
+  site: regex.default,
+  download: regex.default,
+  shop: regex.default,
+  store: regex.default,
+  cloud: regex.default,
+  su: regex.extensions.ru
 }
 
 module.exports = regex

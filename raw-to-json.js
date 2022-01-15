@@ -22,12 +22,14 @@ const rawToJson = (raw, domain) => {
     let result = {
       statusCode: 200,
       isAvailable: false,
+      supportedTLD: false,
       domainName: domain
     }
 
     extensions.map((extension) => {
       if (domain.endsWith('.' + extension)) {
         domainRegex = regex.extensions[extension]
+        result.supportedTLD = true
       }
     })
 

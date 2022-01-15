@@ -48,13 +48,19 @@ Module that allows you to query whois information and display data in json forma
 }
 ```
 
-## Supported TLDs
+## JSON Supported TLDs
 
-|      |      | ALL  |     |       |
-| :--: | :--: | :--: | :-: | :---: |
-| .com | .net | .org | .co |  .me  |
-| .im  | .in  | .xyz | .io | .info |
-| .us  | .ru  | .su  | .uk |   -   |
+Other TLDs output JSON but do not guarantee full compatibility.
+
+|       |           |  ALL  |        |        |
+| :---: | :-------: | :---: | :----: | :----: |
+| .com  |   .net    | .org  |  .co   |  .xyz  |
+|  .io  |    .me    | .info |  .top  |  .in   |
+|  .ai  |  .online  |  .us  |  .biz  |  .tv   |
+| .tech |    .cc    | .club |  .dev  | .mobi  |
+| .name |    .ru    |  .su  |  .im   |  .uk   |
+|  .tc  |    .pw    | .pro  |  .de   |  .app  |
+| .site | .download | .shop | .store | .cloud |
 
 |         |         |    TR    |          |         |
 | :-----: | :-----: | :------: | :------: | :-----: |
