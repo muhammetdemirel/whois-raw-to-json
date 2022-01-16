@@ -53,24 +53,16 @@ Module that allows you to query whois information and display data in json forma
 
 Other TLDs output JSON but do not guarantee full compatibility.
 
-|        |           |    ALL    |          |        |
-| :----: | :-------: | :-------: | :------: | :----: |
-|  .com  |   .net    |   .org    |   .co    |  .xyz  |
-|  .io   |    .me    |   .info   |   .top   |  .in   |
-|  .ai   |  .online  |    .us    |   .biz   |  .tv   |
-| .tech  |    .cc    |   .club   |   .dev   | .mobi  |
-| .name  |    .ru    |    .su    |   .im    |  .uk   |
-|  .tc   |    .pw    |   .pro    |   .de    |  .app  |
-| .site  | .download |   .shop   |  .store  | .cloud |
-|  .cn   |    .at    |    .pm    |   .re    |  .ws   |
-|  .ie   |   .ist    | .istanbul |  .link   |  .kim  |
-|  .vip  |   .red    |   .men    |   .wtf   |  .art  |
-|  .one  |   .news   |   .live   |  .life   | .works |
-| .email |  .design  |  .global  | .network |   .    |
+|       |           |           |        |  ALL   |  TLDS  |         |         |          |       |
+| :---: | :-------: | :-------: | :----: | :----: | :----: | :-----: | :-----: | :------: | :---: |
+| .com  |   .net    |   .org    |  .co   |  .xyz  |  .io   |   .me   |  .info  |   .top   |  .in  |
+|  .ai  |  .online  |    .us    |  .biz  |  .tv   | .tech  |   .cc   |  .club  |   .dev   | .mobi |
+| .name |    .ru    |    .su    |  .im   |  .uk   |  .tc   |   .pw   |  .pro   |   .de    | .app  |
+| .site | .download |   .shop   | .store | .cloud |  .cn   |   .at   |   .pm   |   .re    |  .ws  |
+|  .ie  |   .ist    | .istanbul | .link  |  .kim  |  .vip  |  .red   |  .men   |   .wtf   | .art  |
+| .one  |   .news   |   .live   | .life  | .works | .email | .design | .global | .network |   .   |
 
-|         |         |    TR    |          |         |
-| :-----: | :-----: | :------: | :------: | :-----: |
-| .com.tr | .net.tr | .org.tr  | .gen.tr  | .web.tr |
-| .tv.tr  | .biz.tr | .info.tr | .name.tr | .bbs.tr |
-| .tel.tr | .edu.tr | .gov.tr  |  .dr.tr  | .av.tr  |
-| .pol.tr | .tsk.tr | .mil.tr  | .bel.tr  | .k12.tr |
+|         |         |         |         |   TR    |  TLDS   |         |          |          |         |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :------: | :------: | :-----: |
+| .com.tr | .net.tr | .org.tr | .gen.tr | .web.tr | .tv.tr  | .biz.tr | .info.tr | .name.tr | .bbs.tr |
+| .tel.tr | .edu.tr | .gov.tr | .dr.tr  | .av.tr  | .pol.tr | .tsk.tr | .mil.tr  | .bel.tr  | .k12.tr |
