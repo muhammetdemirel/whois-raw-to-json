@@ -8,7 +8,7 @@ const regex = {
     status: 'Status:\\s*(.+)\\s*\\n',
     nameServers: 'Name Server: *(.+)',
     notFound:
-      '(No match for |Domain not found|No Data Found|DOMAIN NOT FOUND|does not exist|No entries found|No Object Found|not been registered|available for registration|^Not found|^NOT FOUND|^No Data Found|NOT FOUND\\s)'
+      '(No match for |Domain not found|No Data Found|DOMAIN NOT FOUND|does not exist|No entries found|No Object Found|not been registered|is available for registration|^Not found|^NOT FOUND|^No Data Found|NOT FOUND\\s)'
   },
   extensions: {
     tr: {
