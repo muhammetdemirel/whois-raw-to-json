@@ -53,15 +53,17 @@ Module that allows you to query whois information and display data in json forma
 
 Other TLDs output JSON but do not guarantee full compatibility.
 
-|       |           |           |         |  ALL   |   TLDS    |         |          |          |           |
-| :---: | :-------: | :-------: | :-----: | :----: | :-------: | :-----: | :------: | :------: | :-------: |
-| .com  |   .net    |   .org    |   .co   |  .xyz  |    .io    |   .me   |  .info   |   .top   |    .in    |
-|  .ai  |  .online  |    .us    |  .biz   |  .tv   |   .tech   |   .cc   |  .club   |   .dev   |   .mobi   |
-| .name |    .ru    |    .su    |   .im   |  .uk   |    .tc    |   .pw   |   .pro   |   .de    |   .app    |
-| .site | .download |   .shop   | .store  | .cloud |    .cn    |   .at   |   .pm    |   .re    |    .ws    |
-|  .ie  |   .ist    | .istanbul |  .link  |  .kim  |   .vip    |  .red   |   .men   |   .wtf   |   .art    |
-| .one  |   .news   |   .live   |  .life  | .works |  .email   | .design | .global  | .network |   .wiki   |
-| .link | .kitchen  |  .photo   | .photos | .pics  | .pictures |  .bio   | .reviews | .credit  | .computer |
+|         |             |           |         |   ALL   |   TLDS    |         |          |          |        |
+| :-----: | :---------: | :-------: | :-----: | :-----: | :-------: | :-----: | :------: | :------: | :----: |
+|  .com   |    .net     |   .org    |   .co   |  .xyz   |    .io    |   .me   |  .info   |   .top   |  .in   |
+|   .ai   |   .online   |    .us    |  .biz   |   .tv   |   .tech   |   .cc   |  .club   |   .dev   | .mobi  |
+|  .name  |     .ru     |    .su    |   .im   |   .uk   |    .tc    |   .pw   |   .pro   |   .de    |  .app  |
+|  .site  |  .download  |   .shop   | .store  | .cloud  |    .cn    |   .at   |   .pm    |   .re    |  .ws   |
+|   .ie   |    .ist     | .istanbul |  .link  |  .kim   |   .vip    |  .red   |   .men   |   .wtf   |  .art  |
+|  .one   |    .news    |   .live   |  .life  | .works  |  .email   | .design | .global  | .network | .wiki  |
+|  .blog  |  .kitchen   |  .photo   | .photos |  .pics  | .pictures |  .bio   | .reviews | .credit  | .watch |
+| .center | .community  |   .fun    |  .fund  | .market |  .media   | .movie  | .studio  | .support | .taxi  |
+|  .team  | .technology |  .today   | .tools  |  .vote  | .computer | .video  |    .     |    .     |   .    |
 
 |         |         |         |         |   TR    |  TLDS   |         |          |          |         |
 | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :------: | :------: | :-----: |
