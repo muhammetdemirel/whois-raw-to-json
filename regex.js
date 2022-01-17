@@ -141,6 +141,17 @@ regex.extensions = {
   design: regex.default,
   global: regex.default,
   network: regex.default,
+  wiki: regex.default,
+  link: regex.default,
+  kitchen: regex.default,
+  photo: regex.default,
+  photos: regex.default,
+  pics: regex.default,
+  pictures: regex.default,
+  bio: regex.default,
+  reviews: regex.default,
+  credit: regex.default,
+  computer: regex.default,
   su: regex.extensions.ru,
   re: regex.extensions.pm
 }
