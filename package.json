@@ -1,6 +1,6 @@
 {
   "name": "whois-raw-to-json",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Module that allows you to query whois information and display data in json format.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/regexart/whois-raw-to-json#readme",
   "engines": {
-    "node": ">=15"
+    "node": ">=14"
   },
   "dependencies": {
     "html-entities": "^2.3.2",
