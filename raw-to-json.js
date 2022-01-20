@@ -45,7 +45,7 @@ const rawToJson = (raw, domain) => {
         } else if (key === 'notFound') {
           result.isAvailable = true
         } else {
-          let value = raw.match(regexp).at(-1)
+          let value = raw.match(regexp)[raw.match(regexp).length - 1]
 
           if (key === 'status' || key === 'nameServers') {
             let matches = []
